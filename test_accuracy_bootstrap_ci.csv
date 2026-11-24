@@ -1,0 +1,11 @@
+Model,Test acc,95% CI low,95% CI high
+Majority class,0.5132,0.4757,0.5479
+Logistic regression,0.5201,0.484,0.5548
+MLP (default),0.7198,0.6865,0.7531
+CNN (default),0.8488,0.8225,0.8766
+SimpleRNN (default),0.6172,0.5811,0.6533
+LSTM (default),0.5437,0.5104,0.5811
+GRU (default),0.6352,0.6006,0.6713
+TCN (default),0.9376,0.9182,0.9556
+Transformer (default),0.7961,0.767,0.8252
+"TCN (tuned, W=250)",0.9348,0.9168,0.9528

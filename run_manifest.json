@@ -1,0 +1,19 @@
+{
+  "git_commit": "eb9ed4b45d489b7e5eac5583a10dac218e879d09",
+  "git_dirty": true,
+  "git_remote": "https://github.com/IsabellaLoops/AISE_4010_Project.git",
+  "python": "3.14.0",
+  "tensorflow": "2.22.0-rc0",
+  "numpy": "2.4.2",
+  "pandas": "3.0.0",
+  "sklearn": "1.8.0",
+  "device": "CPU",
+  "seed": 42,
+  "finalist": "TCN (tuned, W=250)",
+  "test_acc": 0.9348,
+  "run_order": [
+    "pip install -r requirements.txt",
+    "run AISE4010_Project_Group06.ipynb top to bottom (cells in order)",
+    "python smoke_test.py"
+  ]
+}

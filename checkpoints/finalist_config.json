@@ -1,0 +1,75 @@
+{
+  "stage": 2,
+  "family": "TCN",
+  "hyperparameters": {
+    "filters": 16,
+    "kernel_size": 7
+  },
+  "window": 250,
+  "stride": 125,
+  "window_overlap": 0.5,
+  "input_kind": "seq",
+  "series_length": 500,
+  "series_probability": "mean of window probabilities, threshold 0.5",
+  "class_names": [
+    "No fault",
+    "Fault"
+  ],
+  "seed": 42,
+  "split": {
+    "test_size": 0.2,
+    "val_size": 0.2,
+    "n_train": 2160,
+    "n_val": 720,
+    "n_test": 721
+  },
+  "training": {
+    "epochs_max": 30,
+    "batch_size": 32,
+    "patience": 5,
+    "learning_rate": 0.001,
+    "loss": "binary_crossentropy",
+    "optimizer": "Adam"
+  },
+  "hpo": {
+    "objective": "series-level validation accuracy, tie-break fewer parameters",
+    "search_space": {
+      "window": [
+        100,
+        250,
+        500
+      ],
+      "filters": [
+        16,
+        32
+      ],
+      "kernel_size": [
+        3,
+        7
+      ]
+    },
+    "trials_run": 11,
+    "max_trials": 24,
+    "time_budget_s": 3600
+  },
+  "validation": {
+    "acc": 0.9583333333333334,
+    "f1": 0.9568965517241379,
+    "auc": 0.9928041445656622
+  },
+  "params": 13105,
+  "train_seconds": 105.9341002000001,
+  "device": "CPU",
+  "versions": {
+    "python": "3.14.0",
+    "tensorflow": "2.22.0-rc0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "sklearn": "1.8.0"
+  },
+  "files": [
+    "finalist.keras",
+    "preprocessing.joblib",
+    "split_indices.npz"
+  ]
+}

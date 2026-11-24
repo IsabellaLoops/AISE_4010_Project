@@ -1,0 +1,12 @@
+perturbation,"TCN (tuned, W=250)",TCN (default)
+noise sigma=0.0,0.9348,0.9376
+noise sigma=0.1,0.9279,0.9431
+noise sigma=0.25,0.8974,0.8752
+noise sigma=0.5,0.7642,0.6976
+noise sigma=1.0,0.5146,0.5173
+gain x0.5,0.871,0.9362
+gain x0.8,0.9251,0.9362
+gain x1.2,0.9417,0.9404
+gain x2.0,0.9348,0.9362
+shift 10 samples,0.9307,0.939
+shift 50 samples,0.9334,0.9348
